@@ -10,8 +10,8 @@ class TestSuccessfulLogin:
 
         home_page.open()
         home_page.click_sign_in_button()
-        login_page.fill_email_field()
-        login_page.fill_password_field()
+        login_page.fill_email_field('vladimir.kuznetsov@white-test.com')
+        login_page.fill_password_field('Automation@test2023')
         login_page.click_sign_in_button()
         actual_options = home_page.click_account_button()
         assert home_page.expected_options == actual_options
