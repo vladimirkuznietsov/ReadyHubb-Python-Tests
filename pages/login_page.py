@@ -5,6 +5,9 @@ from locators.login_page_locators import LoginPageLocators as Locators
 
 class LoginPage(BasePage):
 
+    def is_sign_in_button_enabled(self):
+        state = self.element_is_visible(Locators.SIGN_IN_BUTTON)
+        return state.is_enabled()
     def fill_email_field(self, email):
         self.element_is_visible(Locators.EMAIL_INPUT_FIELD).send_keys(email)
 
@@ -18,10 +21,6 @@ class LoginPage(BasePage):
         color = Color.from_string(self.element_is_visible(Locators.EMAIL_INPUT_FIELD).value_of_css_property('border-color')).hex
         return color
 
-    def get_invalid_email_message(self):
-        text = self.element_is_visible(Locators.INVALID_EMAIL_MESSAGE).text
-        return text
-
     def get_password_input_border_color(self):
         color = Color.from_string(self.element_is_visible(Locators.PASSWORD_INPUT_FIELD).value_of_css_property('border-color')).hex
         return color
@@ -29,3 +28,4 @@ class LoginPage(BasePage):
     def get_email_pass_messages(self):
         texts = [i.text for i in self.elements_are_visible(Locators.INVALID_EMAIL_PASS_MESSAGE)]
         return texts
+
