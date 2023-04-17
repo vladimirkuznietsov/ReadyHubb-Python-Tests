@@ -17,7 +17,7 @@ class TestSuccessfulLogin:
         login_page.fill_password_field(Data.password)
         login_page.click_sign_in_button()
         actual_options = home_page.click_account_button()
-
+        time.sleep(5)
         assert home_page.expected_account_dropdown_options == actual_options
 
     def test_invalid_email_login(self, driver):

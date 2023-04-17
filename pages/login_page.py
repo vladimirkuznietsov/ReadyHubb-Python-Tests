@@ -32,3 +32,8 @@ class LoginPage(BasePage):
     def get_email_pass_messages(self):
         texts = [i.text for i in self.elements_are_visible(Locators.INVALID_EMAIL_PASS_MESSAGE)]
         return texts
+
+    def login(self, email, password):
+        self.fill_email_field(email)
+        self.fill_password_field(password)
+        self.click_sign_in_button()

@@ -15,3 +15,14 @@ class HomePage(BasePage):
         options = self.elements_are_visible(Locators.ACCOUNT_OPTIONS)
         texts = [i.text for i in options]
         return texts
+
+    def fill_search_field(self, location):
+        self.element_is_visible(Locators.SELECT_LOCATION_INPUT).click()
+        self.element_is_visible(Locators.SELECT_LOCATION_INPUT).send_keys(location)
+
+    def select_first_location_option(self):
+        self.element_is_visible(Locators.SEARCH_FIRST_OPTION).click()
+
+    def click_account_option(self, index):
+        buttons = self.elements_are_visible(Locators.ACCOUNT_OPTIONS)
+        buttons[index].click()
