@@ -9,3 +9,4 @@ class Data:
     link = 'https://readyhubb.com/'
     invalid_login_message = 'Wrong login or password'
     border_color_invalid_login = '#f36a46'
+    location = 'Atlanta'
