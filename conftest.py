@@ -12,4 +12,4 @@ def driver():
     driver.get(Data.link)
     driver.maximize_window()
     yield driver
-    driver.quit()
+    driver.close()

@@ -9,3 +9,4 @@ class ProfilePageLocators:
     NAME_CHANGED_SUCCESSFULLY_MODAL = (By.XPATH, '//div[@style="max-width: 295px;"]/div/p')
     PROFILE_NAME = (By.XPATH, '//p[@class="text-black leading-7 text-20 font-bold  truncate "]')
     FULL_NAME = (By.XPATH, '//div[@role="none"][2]/div/div/div/div[2]//p[2]')
+    PROFILE_PHOTO_INPUT = (By.XPATH, '//input[@type="file"]')
