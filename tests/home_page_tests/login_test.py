@@ -1,4 +1,5 @@
 import time
+import unittest
 from pages.home_page import HomePage
 from pages.login_page import LoginPage
 from data.data import Data
@@ -6,7 +7,7 @@ from locators.login_page_locators import LoginPageLocators as Locators
 from pages.base_page import BasePage
 
 
-class TestSuccessfulLogin:
+class TestsLogin():
 
     def test_successful_login(self, driver):
         home_page = HomePage(driver)
@@ -63,3 +64,4 @@ class TestSuccessfulLogin:
 
         for i in actual_colors:
             assert i == Data.border_color_invalid_login
+

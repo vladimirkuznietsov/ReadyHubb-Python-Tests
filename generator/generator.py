@@ -8,4 +8,6 @@ Faker.seed()
 def generated_data():
     yield ProfileData(
         first_name=faker_en.first_name(),
-        last_name=faker_en.last_name())
+        last_name=faker_en.last_name(),
+        email=faker_en.email()
+    )

@@ -1,10 +1,11 @@
 import time
-
+import unittest
 from pages.home_page import HomePage
 from pages.search_page import SearchPage
 from data.data import Data
 
-class TestSearch:
+
+class TestSearch():
 
     def test_search_by_location(self, driver):
         home_page = HomePage(driver)
