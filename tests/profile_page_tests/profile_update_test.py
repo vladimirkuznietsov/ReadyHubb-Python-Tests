@@ -15,7 +15,7 @@ class TestUserData():
         home_page = HomePage(driver)
         login_page = LoginPage(driver)
         profile_page = ProfilePage(driver)
-
+        
         home_page.click_sign_in_button()
         login_page.login(Data.email, Data.password)
         home_page.click_account_button()
